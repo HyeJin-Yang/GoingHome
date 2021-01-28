@@ -1,22 +1,23 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_app1/Pages/EntryPage.dart';
+import 'package:flutter_app1/Pages/SignInPage.dart';
 
-void main() => runApp(EntryPage());
-//
-// class MyApp extends StatelessWidget {
-//   @override
-//   Widget build(BuildContext context) {
-//     return MaterialApp(
-//       title: 'We Met',
-//       theme: ThemeData(
-//         primarySwatch: Colors.red,
-//       ),
-//       home: MyHomePage(title: 'We Met'),
-//     );
-//   }
-// }
-//
+void main() => runApp(MyApp());
+
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'We Met',
+      theme: ThemeData(
+        primarySwatch: Colors.red,
+      ),
+      home: SigninPage(),
+    );
+  }
+}
+
 // class MyHomePage extends StatefulWidget {
 //   MyHomePage({Key key, this.title}) : super(key: key);
 //   final String title;

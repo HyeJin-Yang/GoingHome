@@ -27,6 +27,8 @@ flutter:
     - images/fIcon.png
     - images/gIcon.png
     - images/bySigningUpForWe.png
+    - images/phoneIcon.png
+    - images/nameCardIcon.png
   fonts:
     - family: Manjariregular
       fonts:
