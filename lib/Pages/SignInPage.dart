@@ -33,7 +33,7 @@ class _SigninPage extends State<SigninPage> {
               Row(
                 children: [
                   for (int i=0; i<6; i++)
-                    this.curIndex==i ? nameCardImg(screenHeight, screenWidth) : blackCircle(screenWidth)
+                    this.curIndex==i ? mainImg(screenHeight, screenWidth) : blackCircle(screenWidth)
                   ],
                 ),
               mainText(),
@@ -64,18 +64,21 @@ Widget goBackArrow() {
     child: Icon(Icons.arrow_back_ios),
     onTap: onPressedGoBackArrow,
   );
-}
+}  // 이부분 필요하다면 아이콘 수정 필요 -> 아이콘말고 이미지 파일로 받아야함.
 
 Widget closeX(){
   return Icon(Icons.close);
 }
 
-Widget nameCardImg(var screenHeight, var screenWidth){
-  return Container(
-    height:screenHeight*0.046,
-    width:screenWidth*0.101,
-    child:Image.asset('images/nameCardIcon.png'),
-  );
+
+Widget mainImg(var screenHeight, var screenWidth){
+    List<String> mainimageuse = ['images/nameCardIcon.png','images/emailIcon.png','images/sexIcon.png',
+      'images/birthIcon.png','images/introduceIcon.png','images/introduceIcon.png']; //여기 이미지 파일 하나 바꿔야함 이미지파일 못받았음. (프로필 픽쳐 부분)
+    return Container(
+      height:screenHeight*0.046,
+      width:screenWidth*0.101,
+      child:Image.asset(mainimageuse[this.curIndex]),
+    );
 }
 
 Widget blackCircle(var screenWidth){
@@ -125,7 +128,21 @@ Widget nameField() {
 }
 
 Widget emailField(){
-  return Container();
+  return TextFormField(
+    cursorColor: Color.fromRGBO(216, 216, 216, 1.0),
+    decoration: InputDecoration(
+        hintText: "Email Address",
+        border: UnderlineInputBorder(
+            borderSide: BorderSide(color: Color.fromRGBO(216, 216, 216, 1.0), width: 3)
+        ),
+        focusedBorder: UnderlineInputBorder(
+            borderSide: BorderSide(color: Color.fromRGBO(216, 216, 216, 1.0), width: 3)
+        ),
+        disabledBorder: UnderlineInputBorder(
+            borderSide: BorderSide(color: Color.fromRGBO(216, 216, 216, 1.0), width: 3)
+        )
+    ),
+  );
 }
 
 Widget genderField(){
