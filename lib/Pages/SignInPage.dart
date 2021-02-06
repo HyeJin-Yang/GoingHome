@@ -9,7 +9,7 @@ class _SigninPage extends State<SigninPage> {
   double screenHeight;
   double screenWidth;
   int curIndex = 0;
-
+  DateTime dayPicker = DateTime.now();
   @override
   Widget build(BuildContext context) {
     screenHeight = MediaQuery.of(context).size.height;
@@ -100,7 +100,7 @@ Widget mainText(){
   "What's your date of birth?", "Pick your profile pictures", "Introduce yourself"];
   return Padding(
     padding: EdgeInsets.only(top: screenHeight*0.018, bottom: screenHeight*0.08),
-    child: Text(text[this.curIndex], style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold), textAlign: TextAlign.left,));
+    child: Text(text[this.curIndex], style: TextStyle(fontFamily: 'Manjaribold', fontSize: 22, fontWeight: FontWeight.bold), textAlign: TextAlign.left,));
 }
 
 Widget userInputField(){
@@ -111,6 +111,7 @@ Widget userInputField(){
 
 Widget nameField() {
   return TextFormField(
+    style: TextStyle(fontFamily: 'Manjaribold'),
     cursorColor: Color.fromRGBO(216, 216, 216, 1.0),
     decoration: InputDecoration(
       hintText: "Nickname",
@@ -129,6 +130,7 @@ Widget nameField() {
 
 Widget emailField(){
   return TextFormField(
+    style: TextStyle(fontFamily: 'Manjaribold'),
     cursorColor: Color.fromRGBO(216, 216, 216, 1.0),
     decoration: InputDecoration(
         hintText: "Email Address",
@@ -150,7 +152,31 @@ Widget genderField(){
 }
 
 Widget birthField(){
-  return Container();
+  return Container(
+      height: screenHeight*0.4,
+      width: screenWidth*0.853,
+      child:CupertinoTheme(
+          data: CupertinoThemeData(
+            textTheme: CupertinoTextThemeData(
+              dateTimePickerTextStyle: TextStyle(
+                fontSize: 20, fontFamily: 'Manjaribold'
+              ),
+            ),
+          ),
+        child:CupertinoDatePicker(
+          initialDateTime: DateTime.now(),
+          minimumYear: 1900,
+          maximumYear:2021,
+          use24hFormat: true,
+          mode: CupertinoDatePickerMode.date,
+          onDateTimeChanged: (time) {
+            setState(() {
+              dayPicker = time;
+            });
+          })
+        )
+  );
+
 }
 
 Widget profilePicField(){

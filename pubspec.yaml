@@ -21,19 +21,7 @@ flutter:
   uses-material-design: true
 
   assets:
-    - images/logoIcon.png
-      - images/weMet.png
-      - images/weMet.png
-      - images/fIcon.png
-      - images/gIcon.png
-      - images/bySigningUpForWe.png
-      - images/phoneIcon.png
-      - images/nameCardIcon.png
-      - images/sexIcon.png
-      - images/backIcon.png
-      - images/emailIcon.png
-      - images/birthIcon.png
-      - images/introduceIcon.png
+    - images/
   fonts:
     - family: Manjariregular
       fonts:
