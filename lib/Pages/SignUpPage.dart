@@ -2,7 +2,7 @@ import 'dart:io';
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:wemet/Widget/SignUpWidgets.dart';
+import 'package:flutter_app1/Widget/SignUpWidgets.dart';
 
 class SignUpPage extends StatefulWidget {
   _SignUpPage createState() => _SignUpPage();

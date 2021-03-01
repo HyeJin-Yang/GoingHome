@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:wemet/Widget/MainWidgets.dart';
+import 'package:flutter_app1/Widget/MainWidgets.dart';
 
 class MyProfile extends StatefulWidget {
   _MyProfile createState() => _MyProfile();

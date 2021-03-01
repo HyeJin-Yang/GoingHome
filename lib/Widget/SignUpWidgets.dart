@@ -1,12 +1,12 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:wemet/Widget/SignUpWidgets/BirthField.dart';
-import 'package:wemet/Widget/SignUpWidgets/GenderField.dart';
-import 'package:wemet/Widget/SignUpWidgets/ProfilePictureField.dart';
-import 'package:wemet/Widget/SignUpWidgets/TopIcons.dart';
 
+import 'SignUpWidgets/BirthField.dart';
 import 'SignUpWidgets/CurrentPosition.dart';
+import 'SignUpWidgets/GenderField.dart';
+import 'SignUpWidgets/ProfilePictureField.dart';
 import 'SignUpWidgets/TextFields.dart';
+import 'SignUpWidgets/TopIcons.dart';
 
 class SignUpWidgets {
   Widget topIcons(screenHeight, screenWidth, onPressedGoBackArrow) {
