@@ -1,6 +1,7 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_app1/Pages/SignInPage.dart';
-import 'package:flutter_app1/Widgets/Buttons.dart';
+
+import 'SignUpPage.dart';
 
 class EntryPage extends StatefulWidget {
   _EntryPage createState() => _EntryPage();
@@ -26,16 +27,47 @@ class _EntryPage extends State<EntryPage> {
                 ),
                 Padding(padding: EdgeInsets.only(top: screenHeight*0.364)),
                 Column(
-                  children: [
-                    Buttons().entrySignIn(screenHeight, screenWidth, Color.fromRGBO(29,21,17,1.0), 'images/gIcon.png', 'Sign in with Google', onPressGoogleLogin),
-                    Buttons().entrySignIn(screenHeight, screenWidth, Color.fromRGBO(59,90,154,1.0), 'images/fIcon.png', 'Sign in with Facebook', onPressFacebookLogin),
-                    Buttons().entrySignIn(screenHeight, screenWidth, Color.fromRGBO(255,200,200,1.0), 'images/phoneIcon.png', 'Sign in with Phone Number', onPressphonenumLogin, fontColor: Color.fromRGBO(29, 21, 17, 1.0)),
-                  ]
+                    children: [
+                      entrySignUpButton(screenHeight, screenWidth, Color.fromRGBO(29,21,17,1.0), 'images/gIcon.png', 'Sign in with Google', onPressGoogleLogin),
+                      entrySignUpButton(screenHeight, screenWidth, Color.fromRGBO(59,90,154,1.0), 'images/fIcon.png', 'Sign in with Facebook', onPressFacebookLogin),
+                      entrySignUpButton(screenHeight, screenWidth, Color.fromRGBO(255,200,200,1.0), 'images/phoneIcon.png', 'Sign in with Phone Number', onPressPhoneNumLogin, fontColor: Color.fromRGBO(29, 21, 17, 1.0)),
+                    ]
                 ),
                 policy(screenHeight, screenWidth),
               ],
             )
         )
+    );
+  }
+
+  Widget entrySignUpButton(var screenHeight, var screenWidth, var color, String imgPath, String text, var onPressAction, {fontColor=Colors.white}) {
+    return Padding(
+      padding: EdgeInsets.only(right: screenWidth*0.114, left: screenWidth*0.114, bottom: screenHeight*0.012),
+      child: SizedBox(
+        height: screenHeight * 0.062,
+        child: RaisedButton(
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              Container(
+                height: 20,
+                child:Image.asset(imgPath),
+              ),
+              Padding(padding: EdgeInsets.all(5)),
+              Container(
+                padding: EdgeInsets.only(top: 5),
+                child:Text(text, style:TextStyle(fontFamily:'Manjaribold', fontSize:18, color:fontColor)),
+              ),
+            ],
+          ),
+          onPressed: onPressAction,
+          color:color,
+          shape:RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(90.0),
+          ),
+        ),
+      ),
     );
   }
 
@@ -65,19 +97,19 @@ class _EntryPage extends State<EntryPage> {
   onPressGoogleLogin() {
     Navigator.push(
       context,
-      MaterialPageRoute(builder: (context) => SigninPage()),
+      MaterialPageRoute(builder: (context) => SignUpPage()),
     );
   }
   onPressFacebookLogin() {
     Navigator.push(
       context,
-      MaterialPageRoute(builder: (context) => SigninPage()),
+      MaterialPageRoute(builder: (context) => SignUpPage()),
     );
   }
-  onPressphonenumLogin() {
+  onPressPhoneNumLogin() {
     Navigator.push(
       context,
-      MaterialPageRoute(builder: (context) => SigninPage()),
+      MaterialPageRoute(builder: (context) => SignUpPage()),
     );
   }
 }

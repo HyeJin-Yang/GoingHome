@@ -1,17 +1,18 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_app1/Pages/EntryPage.dart';
+import 'Pages/EntryPage.dart';
+import 'Pages/MainPage.dart';
 
-void main() => runApp(MyApp());
+void main() {
+  runApp(MyApp());
+}
 
 class MyApp extends StatelessWidget {
+  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'We Met',
-      theme: ThemeData(
-        primarySwatch: Colors.red,
-      ),
       home: EntryPage(),
+      // home: MainPage(),
     );
   }
 }

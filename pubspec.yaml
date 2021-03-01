@@ -11,6 +11,8 @@ dependencies:
     sdk: flutter
 
   cupertino_icons: ^1.0.0
+  image_picker: ^0.6.7+22
+  google_sign_in: ^4.5.9
 
 dev_dependencies:
   flutter_test:
