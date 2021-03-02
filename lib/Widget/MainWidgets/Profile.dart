@@ -17,11 +17,14 @@ class Profile{
                 BoxShadow(color: Colors.black12, offset: Offset(3.0, 6.0), blurRadius: 10.0)
               ]
           ),
-          child: new Column(
+          child: new Container(
+            padding: EdgeInsets.only(right:screenWidth*0.072, left:screenWidth*0.072),
+            child: new Column(
               children: [
                 TopBar().topBar(screenHeight, screenWidth, (){}),
                 _profile(screenHeight, screenWidth),
               ],
+            ),
           ),
         ),
       ),
@@ -42,8 +45,11 @@ class Profile{
                 borderRadius: BorderRadius.circular(8.0)
             ),
           ),
-          new Padding(padding: EdgeInsets.only(top: screenHeight*0.0184, bottom: screenHeight*0.0184),child: new Text('Name', style: TextStyle(color: Colors.white, fontSize: 24),),),
-          new Padding(padding: EdgeInsets.only(bottom: screenHeight*0.0431), child: new GestureDetector(child: Text("프로필 수정", style: TextStyle(color: Colors.white, fontSize: 16)),))
+          Padding(
+            padding: EdgeInsets.only(top: 3, bottom: 5),
+            child: new Text('Name', style: TextStyle(color: Colors.white, fontSize: 24)),
+          ),
+          new GestureDetector(child: Text("프로필 수정", style: TextStyle(color: Colors.white, fontSize: 16))),
         ],
       ),
     );

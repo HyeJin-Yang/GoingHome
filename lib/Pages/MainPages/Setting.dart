@@ -34,16 +34,20 @@ class _Setting extends State<Setting> {
       backgroundColor: Color.fromRGBO(52, 51, 60, 1.0),
       body: Container(
         padding: EdgeInsets.only(right: screenWidth*0.0693, left: screenWidth*0.0693),
-        child: new Column(
-        children: [
-          SettingWidgets().topBar(screenHeight, screenWidth, (){}),
-          SettingWidgets().want2Gender(screenHeight, screenWidth, gender, onChangeGender),
-          SettingWidgets().want2Age(screenHeight, screenWidth, minAge, maxAge, onChangeAge),
-          SettingWidgets().want2Height(screenHeight, screenWidth, minHeight, maxHeight, onChangeHeight),
-          SettingWidgets().want2Distance(screenHeight, screenWidth, distance, onChangeDistance),
-          SettingWidgets().want2Alarm(screenHeight, screenWidth, pushAlarm, flowerAlarm, coffeeAlarm, onChangeAlarm),
-        ],
-      ),
+        child: new ListView(
+          children: [
+            new Column(
+              children: [
+                SettingWidgets().topBar(screenHeight, screenWidth, (){}),
+                SettingWidgets().want2Gender(screenHeight, screenWidth, gender, onChangeGender),
+                SettingWidgets().want2Age(screenHeight, screenWidth, minAge, maxAge, onChangeAge),
+                SettingWidgets().want2Height(screenHeight, screenWidth, minHeight, maxHeight, onChangeHeight),
+                SettingWidgets().want2Distance(screenHeight, screenWidth, distance, onChangeDistance),
+                SettingWidgets().want2Alarm(screenHeight, screenWidth, pushAlarm, flowerAlarm, coffeeAlarm, onChangeAlarm),
+              ],
+            )
+          ],
+        ),
       )
     );
   }

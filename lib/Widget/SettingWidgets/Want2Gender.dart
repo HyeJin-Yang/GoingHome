@@ -4,7 +4,6 @@ import 'package:flutter/rendering.dart';
 class Want2Gender {
   Widget want2Gender(screenHeight, screenWidth, gender, action) {
     return Container(
-      height: screenHeight*0.08,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.start,
         crossAxisAlignment: CrossAxisAlignment.start,

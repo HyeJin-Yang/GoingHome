@@ -8,10 +8,26 @@ class TopBar{
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          left(onPressedGoBackArrow),
-          new Padding(padding: EdgeInsets.only(left: screenWidth*0.2933, right: screenWidth*0.2933),
-            child: new Text("설정", style: TextStyle(fontSize: 18, color: Color.fromRGBO(255, 200, 200, 1.0)),)),
-          right(onPressedGoBackArrow)
+          Expanded(
+              child: Align(
+                alignment: Alignment.centerLeft,
+                child: left(onPressedGoBackArrow),
+              )
+          ),
+          Expanded(
+              child: Align(
+                  alignment: Alignment.center,
+                  child: new Text("설정",
+                    style: TextStyle(fontSize: 18, color: Color.fromRGBO(255, 200, 200, 1.0)),
+                  )
+              )
+          ),
+          Expanded(
+              child: Align(
+                alignment: Alignment.centerRight,
+                child: right(onPressedGoBackArrow),
+              )
+          ),
         ],
       ),
     );

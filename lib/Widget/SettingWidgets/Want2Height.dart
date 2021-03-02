@@ -4,15 +4,15 @@ class Want2Height {
   Widget want2Height(
       screenHeight, screenWidth, double minHeight, double maxHeight, onChangeHeight) {
     return Container(
-        // padding: EdgeInsets.only(top: screenHeight*0.005),
+      // padding: EdgeInsets.only(top: screenHeight*0.005),
         height: screenHeight * 0.15,
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            mainText(),
-            slider(screenWidth, minHeight, maxHeight, onChangeHeight),
-            subText(minHeight, maxHeight)
+            Flexible(child: mainText()),
+            Flexible(child: slider(screenWidth, minHeight, maxHeight, onChangeHeight)),
+            Flexible(child: subText(minHeight, maxHeight))
           ],
         ));
   }

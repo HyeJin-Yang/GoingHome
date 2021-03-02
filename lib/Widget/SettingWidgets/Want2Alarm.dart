@@ -27,10 +27,9 @@ class Want2Alarm{
   Widget pushSwitch(pushAlarm, onChangeAlarm) {
     return Row(
       children: [
-        Expanded(
+        Flexible(
           child: new Container(
             alignment: Alignment.centerLeft,
-            width: 100,
             child: Text("푸쉬알람 받기",
             style: TextStyle(fontFamily: 'Manjaribold', fontSize: 18, color: Color.fromRGBO(255, 200, 200, 1.0)), textAlign: TextAlign.left,),
           ),
@@ -48,10 +47,9 @@ class Want2Alarm{
   Widget flowerSwitch(flowerAlarm, onChangeAlarm) {
     return Row(
       children: [
-        Expanded(
+        Flexible(
           child: new Container(
             alignment: Alignment.centerLeft,
-            width: 100,
             child: Text("꽃다발 받기",
             style: TextStyle(fontFamily: 'Manjaribold', fontSize: 18, color: Color.fromRGBO(255, 200, 200, 1.0)), textAlign: TextAlign.left,),
           ),
@@ -69,10 +67,9 @@ class Want2Alarm{
   Widget coffeeSwitch(coffeeAlarm, onChangeAlarm) {
     return Row(
       children: [
-        Expanded(
+        Flexible(
           child: new Container(
             alignment: Alignment.centerLeft,
-            width: 100,
             child: Text("커피 받기",
             style: TextStyle(fontFamily: 'Manjaribold', fontSize: 18, color: Color.fromRGBO(255, 200, 200, 1.0)), textAlign: TextAlign.left,),
           ),

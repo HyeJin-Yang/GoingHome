@@ -3,15 +3,15 @@ import 'package:flutter/material.dart';
 class Want2Distance {
   Widget want2Distance(screenDistance, screenWidth, double distance, onChangeDistance) {
     return Container(
-        // padding: EdgeInsets.only(top: screenDistance * 0.005),
+      // padding: EdgeInsets.only(top: screenDistance * 0.005),
         height: screenDistance * 0.15,
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            mainText(),
-            slider(screenWidth, distance, onChangeDistance),
-            subText(distance)
+            Flexible(child: mainText()),
+            Flexible(child: slider(screenWidth, distance, onChangeDistance)),
+            Flexible(child: subText(distance))
           ],
         ));
   }

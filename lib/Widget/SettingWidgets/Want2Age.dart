@@ -10,9 +10,9 @@ class Want2Age {
           mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            mainText(),
-            slider(screenWidth, minAge, maxAge, onChangeAge),
-            subText(minAge, maxAge)
+            Flexible(child: mainText()),
+            Flexible(child: slider(screenWidth, minAge, maxAge, onChangeAge)),
+            Flexible(child: subText(minAge, maxAge))
           ],
         ));
   }
