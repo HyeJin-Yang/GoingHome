@@ -22,7 +22,7 @@ class SignUpWidgets {
       "What's your date of birth?", "Pick your profile pictures", "Introduce yourself"];
     return Container(
         child:Padding(
-            padding: EdgeInsets.only(top: screenHeight*0.018),
+            padding: EdgeInsets.only(top: screenHeight*0.0184),
             child: Text(text[curIndex], style: TextStyle(fontFamily: 'Manjaribold', fontSize: 22, fontWeight: FontWeight.bold), textAlign: TextAlign.left,))
     );
   }

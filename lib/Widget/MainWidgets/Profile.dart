@@ -35,15 +35,15 @@ class Profile{
         mainAxisAlignment: MainAxisAlignment.end,
         children: [
           new Container(
-            height: 110.0,
-            width: 110.0,
+            height: 115.0,
+            width: 115.0,
             decoration: BoxDecoration(
                 color: Colors.white,
                 borderRadius: BorderRadius.circular(8.0)
             ),
           ),
-          new Padding(padding: EdgeInsets.all(8),child: new Text('Name', style: TextStyle(color: Colors.white, fontSize: 24),),),
-          new Padding(padding: EdgeInsets.only(bottom: 20), child: new GestureDetector(child: Text("프로필 수정", style: TextStyle(color: Colors.white, fontSize: 12)),))
+          new Padding(padding: EdgeInsets.only(top: screenHeight*0.0184, bottom: screenHeight*0.0184),child: new Text('Name', style: TextStyle(color: Colors.white, fontSize: 24),),),
+          new Padding(padding: EdgeInsets.only(bottom: screenHeight*0.0431), child: new GestureDetector(child: Text("프로필 수정", style: TextStyle(color: Colors.white, fontSize: 16)),))
         ],
       ),
     );

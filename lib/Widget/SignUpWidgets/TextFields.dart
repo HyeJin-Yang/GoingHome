@@ -4,12 +4,14 @@ class TextFields {
 
   Widget nameField(screenHeight, onChangeText, controller) {
     return Padding(
-      padding: EdgeInsets.only(top: screenHeight*0.08),
+      padding: EdgeInsets.only(top: screenHeight*0.107),
       child: new TextFormField(
         style: TextStyle(fontFamily: 'Manjaribold'),
         cursorColor: Color.fromRGBO(216, 216, 216, 1.0),
         controller: controller,
         decoration: InputDecoration(
+            isDense: true,
+            contentPadding: EdgeInsets.zero,
             hintText: "Nickname",
             border: UnderlineInputBorder(
                 borderSide: BorderSide(color: Color.fromRGBO(216, 216, 216, 1.0), width: 3)
@@ -28,12 +30,14 @@ class TextFields {
 
   Widget emailField(screenHeight, onChangeText, controller) {
     return Padding(
-      padding: EdgeInsets.only(top: screenHeight*0.08),
+      padding: EdgeInsets.only(top: screenHeight*0.107),
       child: new TextFormField(
         style: TextStyle(fontFamily: 'Manjaribold'),
         cursorColor: Color.fromRGBO(216, 216, 216, 1.0),
         controller: controller,
         decoration: InputDecoration(
+          isDense: true,
+            contentPadding: EdgeInsets.zero,
             hintText: "email address",
             border: UnderlineInputBorder(
                 borderSide: BorderSide(color: Color.fromRGBO(216, 216, 216, 1.0), width: 3)
@@ -53,6 +57,7 @@ class TextFields {
   Widget introduceField(screenHeight, onChangeText, controller){
     var maxLines = 15;
     return Container(
+        padding: EdgeInsets.only(top: screenHeight*0.0123),
         height: screenHeight*0.6,
         child: new TextFormField(
           style: TextStyle(fontFamily: 'Manjaribold'),

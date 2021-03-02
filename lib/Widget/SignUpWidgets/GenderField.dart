@@ -9,9 +9,9 @@ class GenderField {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          genderImgs(gender, onTap),
+          Padding(padding: EdgeInsets.only(top: screenHeight*0.0123, bottom:screenHeight*0.0418), child: genderImgs(gender, onTap)),
           Text("Want to cross paths with...", style: TextStyle(fontFamily: 'Manjaribold', fontSize: 22, fontWeight: FontWeight.bold), textAlign: TextAlign.left,),
-          genderWantToCross("Men", want2men, want2women, onChanged),
+          Padding(padding: EdgeInsets.only(top:screenHeight*0.0246, bottom: 10), child: genderWantToCross("Men", want2men, want2women, onChanged)),
           genderWantToCross("WoMen", want2men, want2women, onChanged),
         ],
       ),
@@ -19,16 +19,13 @@ class GenderField {
   }
 
   Widget genderImgs(gender, onTap) {
-    return Padding(
-      padding: EdgeInsets.only(bottom: 20),
-      child: Row(
+    return Row(
         children: [
           Expanded(child: genderImg(
               gender == 0 ? "images/gender_manOButton.png" : "images/gender_manXButton.png", onTap)),
           Padding(padding: EdgeInsets.only(right: 10, left: 10),),
           Expanded(child: genderImg(gender == 1 ? "images/gender_womanOButton.png" : "images/gender_womanXButton.png", onTap)),
         ],
-      ),
     );
   }
 

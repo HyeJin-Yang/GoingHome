@@ -3,12 +3,13 @@ import 'package:flutter/material.dart';
 class TopIcons{
   Widget topIcons(screenHeight, screenWidth, onPressedGoBackArrow){
     return new Container(
-      padding: EdgeInsets.only(top: screenHeight*0.0825, bottom:screenHeight*0.0825, left: screenWidth*0.064, right: screenWidth*0.064),
+      padding: EdgeInsets.only(top: screenHeight*0.07142, bottom:screenHeight*0.07882, left: screenWidth*0.064, right: screenWidth*0.064),
       child: Row(
+        crossAxisAlignment: CrossAxisAlignment.center,
+        mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          goBackArrow(onPressedGoBackArrow),
-          Padding(padding: EdgeInsets.only(left: screenWidth*0.39, right:screenWidth*0.36)),
-          closeX()
+          Expanded(child:Container(alignment: Alignment.centerLeft,child:goBackArrow(onPressedGoBackArrow))),
+          Expanded(child:Container(alignment: Alignment.centerRight, child:closeX()))
         ],
       ),
     );

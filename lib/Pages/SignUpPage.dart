@@ -50,10 +50,12 @@ class _SignUpPage extends State<SignUpPage> {
         body: new ListView(
           children: [
             new Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 SignUpWidgets().topIcons(screenHeight, screenWidth, onPressedGoBackArrow),
                 new Container(
-                  padding: EdgeInsets.only(left: screenWidth*0.072, right:screenWidth*0.072),
+                  padding: EdgeInsets.only(right:screenWidth*0.072, left:screenWidth*0.072),
                   child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [

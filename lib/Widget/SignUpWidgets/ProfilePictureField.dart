@@ -25,7 +25,7 @@ class _ProfilePictureField extends State<ProfilePictureField>{
         decoration: new BoxDecoration(
             border: Border.all(color: Colors.black)
         ),
-        child: images.isNotEmpty ? Image.file(images[0]) : Text(''),
+        child: images.isNotEmpty ? Image.file(images[images.length-1]) : Icon(Icons.add_a_photo),
       ),
       onTap: getImage,
     );
