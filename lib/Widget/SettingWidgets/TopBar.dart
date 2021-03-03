@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 class TopBar{
   Widget topBar(screenHeight, screenWidth, onPressedGoBackArrow){
     return new Container(
-      padding: EdgeInsets.only(top: screenHeight*0.07143, bottom: screenHeight*0.03694),
+      padding: EdgeInsets.only(bottom: screenHeight*0.03694),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.center,

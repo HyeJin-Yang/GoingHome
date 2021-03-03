@@ -38,15 +38,15 @@ class Profile{
         mainAxisAlignment: MainAxisAlignment.end,
         children: [
           new Container(
-            height: 115.0,
-            width: 115.0,
+            height: screenHeight*0.1416,
+            width: screenWidth*0.3066,
             decoration: BoxDecoration(
                 color: Colors.white,
                 borderRadius: BorderRadius.circular(8.0)
             ),
           ),
           Padding(
-            padding: EdgeInsets.only(top: 3, bottom: 5),
+            padding: EdgeInsets.only(top: screenHeight*0.01847, bottom: screenHeight*0.01847),
             child: new Text('Name', style: TextStyle(color: Colors.white, fontSize: 24)),
           ),
           new GestureDetector(child: Text("프로필 수정", style: TextStyle(color: Colors.white, fontSize: 16))),
