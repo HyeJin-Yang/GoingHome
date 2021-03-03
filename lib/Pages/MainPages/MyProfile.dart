@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_app1/Widget/MainWidgets.dart';
-
-import 'Setting.dart';
+import '../SubPages/purchaseCoffee.dart';
+import '../SubPages/Setting.dart';
 
 class MyProfile extends StatefulWidget {
   _MyProfile createState() => _MyProfile();
@@ -29,7 +29,7 @@ class _MyProfile extends State<MyProfile> {
                 MainWidgets().mainProfileButton(screenHeight, screenWidth,
                 'images/cup.png', "보유 커피 : 9잔", (){}),
                 MainWidgets().mainProfileButton(screenHeight, screenWidth,
-                'images/home2.png', "커피 구매하러 가기", (){}),
+                'images/home2.png', "커피 구매하러 가기", onTapPurchaseCoffee),
                 MainWidgets().mainProfileButton(screenHeight, screenWidth,
                 'images/wheel.png', "설정", onTapSetting),
               ],
@@ -43,6 +43,10 @@ class _MyProfile extends State<MyProfile> {
 
   onTapSetting() {
     moveTo(Setting());
+  }
+
+  onTapPurchaseCoffee() {
+    PurchaseCoffee().purchaseCoffee(context);
   }
 
   moveTo(page) {
