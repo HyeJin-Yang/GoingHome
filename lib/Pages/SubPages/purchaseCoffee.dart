@@ -91,7 +91,10 @@ class PurchaseCoffee {
     return Column(
       mainAxisAlignment: MainAxisAlignment.start,
       crossAxisAlignment: CrossAxisAlignment.start,
-      children: [Text("$textNum"), Text("$textDesc")],
+      children: [
+        Text("$textNum", style: TextStyle(fontSize: 14),),
+        Text("$textDesc", style: TextStyle(fontSize: 14))
+        ],
     );
   }
 
@@ -100,7 +103,7 @@ class PurchaseCoffee {
   }
 
   contentPrice(price) {
-    return Text("$price", textAlign: TextAlign.end,);
+    return Text("$price", style: TextStyle(fontSize: 14), textAlign: TextAlign.end,);
   }
 
   contentArrow() {
