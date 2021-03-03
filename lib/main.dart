@@ -1,18 +1,17 @@
 import 'package:flutter/material.dart';
-import 'Pages/EntryPage.dart';
-import 'Pages/MainPage.dart';
+
+import 'Pages/Entry/EntryPage.dart';
 
 void main() {
   runApp(MyApp());
 }
 
-class MyApp extends StatelessWidget {
-  // This widget is the root of your application.
+class MyApp extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      // home: EntryPage(),
-      home: MainPage(),
+      home: EntryPage()
     );
   }
+  
 }
