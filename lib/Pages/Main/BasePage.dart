@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_app1/Pages/Main/Coffee/CoffeeBasePage.dart';
+import 'package:flutter_app1/Pages/Main/Flower/FlowerBasePage.dart';
 import 'package:flutter_app1/Widgets/Main/BottomNavigationBar.dart';
 
 import 'Profile/ProfileBasePage.dart';
@@ -13,7 +15,12 @@ class _BasePage extends State<BasePage> {
   var color;
   @override
   Widget build(BuildContext context) {
-    var pages = [WeMetBasePage(), 1, 2, ProfileBasePage(onTapSetting)];
+    var pages = [
+      WeMetBasePage(),
+      CoffeeBasePage(),
+      FlowerBasePage(),
+      ProfileBasePage(onTapSetting)
+      ];
     var screenHeight = MediaQuery.of(context).size.height;
     var screenWidth = MediaQuery.of(context).size.width;
     return Scaffold(

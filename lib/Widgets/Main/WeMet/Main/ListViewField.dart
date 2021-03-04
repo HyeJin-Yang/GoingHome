@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 
 import '../../TopBar.dart';
+import 'BlockAlert.dart';
+import 'SendFlowerAlert.dart';
 
 class ListViewField {
-  Widget listViewField(screenHeight, screenWidth) {
+  Widget listViewField(screenHeight, screenWidth, context, onTapProfile) {
     return Column(
       children: [
         Padding(
@@ -20,7 +22,7 @@ class ListViewField {
             padding: EdgeInsets.zero,
             children: [
               for (int i=0; i<10; i++)
-                contentRow(screenHeight, screenWidth),
+                contentRow(screenHeight, screenWidth, context, onTapProfile),
             ],
           ),
         )
@@ -28,13 +30,15 @@ class ListViewField {
     );
   }
 
-  Widget contentRow(screenHeight, screenWidth, {image}) {
+  Widget contentRow(screenHeight, screenWidth, context, onTapProfile, {image}) {
     return Padding(
       padding: EdgeInsets.only(bottom: screenHeight*0.0332),
       child: Container(
       height: screenHeight*0.0923,
       width: screenWidth,
-      child: Row(
+      child: GestureDetector(
+        onTap: onTapProfile,
+        child: Row(
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.center,
       children: [
@@ -44,9 +48,10 @@ class ListViewField {
         textField(),
         Padding(
           padding: EdgeInsets.only(left: screenWidth*0.0413/2),
-          child: rightImages(screenHeight, screenWidth))
+          child: rightImages(screenHeight, screenWidth, context))
       ],
     )
+      )
     )
     );
   }
@@ -81,19 +86,19 @@ class ListViewField {
     );
   }
 
-  Widget rightImages(screenHeight, screenWidth) {
+  Widget rightImages(screenHeight, screenWidth, context) {
     return Column(
       children: [
-        imageButton(screenHeight, screenWidth, 'images/flower2.png', (){}),
+        imageButton(screenHeight, screenWidth, 'images/flower2.png', () => SendFlowerAlert().sendFlowerAlert(context)),
         Padding(padding: EdgeInsets.only(bottom: 10),),
-        imageButton(screenHeight, screenWidth, 'images/trash.png', (){}),
+        imageButton(screenHeight, screenWidth, 'images/trash.png', () => BlockAlert().blockAlert(context)),
       ],
     );
   }
 
   Widget imageButton(screenHeight, screenWidth, image, action) {
     return GestureDetector(
-      onTap: () => action(),
+      onTap: action,
       child: Image.asset(image, scale: 0.7,),
     );
   }

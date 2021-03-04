@@ -12,10 +12,21 @@ class _WeMetBasePage extends State<WeMetBasePage> {
   @override
   Widget build(BuildContext context) {
     var pages = [
-    WeMetMainPage(),
-    WeMetProfilePage()
+    WeMetMainPage(onTapProfile),
+    WeMetProfilePage(onTapProfileBack)
     ];
     return pages[currentIndex];
   }
 
+  onTapProfile() {
+    setState(() {
+      this.currentIndex = 1;
+    });
+  }
+
+  onTapProfileBack() {
+    setState(() {
+      this.currentIndex = 0;
+    });
+  }
 }
